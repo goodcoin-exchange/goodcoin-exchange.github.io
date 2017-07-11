@@ -1,0 +1,51 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+p, li, h1, h2, h3 {
+  font-family: monospace;
+}
+
+
+
+.hyper-icon {
+  margin-right: 5px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {height: 625px}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #e7e7e7;
+  height: 100%;
+  bottom: 0;
+}
+
+.jumbotron {
+  background-color: #e7e7e7;
+}
+
+/* Set black background color, white text and some padding */
+
+
+ footer {
+
+  padding: 15px;
+  background-color: #757575;
+  color: white;
+  text-align: center;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+}
