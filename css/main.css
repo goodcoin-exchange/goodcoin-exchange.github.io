@@ -3,11 +3,20 @@ p, li, h1, h2, h3 {
   font-family: monospace;
 }
 
+* {
+    margin: 0;
+}
+
 html, body {
     padding:0;
     margin:0;
     height:100%;
     width: 100%;
+    background-color: #e7e7e7;
+}
+
+.active {
+    font-weight: bold;
 }
 
 .no-border {
@@ -16,17 +25,20 @@ html, body {
 
 .top-tron {
     width: 100%;
-    height: 75%;
+    height: 93%;
     padding-top: 50px;
 }
 
 
 
 .tile {
-    width: 25%;
+    /*width: 20%;
     height: 100%;
     display: inline-block;
     margin: 50px;
+    position: relative;*/
+
+    width: 100%;
 
     -moz-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -43,12 +55,15 @@ html, body {
     -webkit-box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);
     box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);
 
-    margin-top: 40px;
+    margin-top: -10px;
     transition: all .2s;
     -o-transition: all .2s;
     -moz-transition: all .2s;
     -webkit-transition: all .2s;
 }
+
+
+
 
 .link-color {
     color: black;
@@ -68,8 +83,17 @@ html, body {
     padding: 10% 10% 10% 10%;
 }
 
-.align-left {
-    text-align: left;
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float:right;
+}
+
+.float-center {
+    margin: 0 auto;
+
 }
 
 .align-center {
@@ -88,6 +112,10 @@ html, body {
 
 .dark-gray {
     background-color: #bdbdbd;
+}
+
+.light-blue {
+    background-color: #B3E5FC;
 }
 
 .white {
@@ -119,19 +147,22 @@ html, body {
 /* Set black background color, white text and some padding */
 
 
+
  footer {
     position:relative;
     bottom:0;
     width:100%;
-    height:60px;   /* Height of the footer */
+    /*height:60px;   /* Height of the footer */
+    height:7%;
     background-color:#757575;
     color: white;
     text-align: center;
 
 }
 
+
 .footer-img {
-    padding-top: 15px;
+    padding-top: 10px;
     display: inline-block;
 }
 
@@ -144,6 +175,7 @@ html, body {
   opacity: 1;
 }
 
+
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
   .sidenav {
@@ -151,4 +183,8 @@ html, body {
     padding: 15px;
   }
   .row.content {height:auto;}
+
+  footer {
+      position: fixed;
+  }
 }
