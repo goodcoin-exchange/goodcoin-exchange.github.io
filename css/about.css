@@ -55,14 +55,14 @@ html, body {
     margin-top: 2%;
 }
 
-.blackboard {
+/*.blackboard {
     background-image: url("../resources/dark-blackboard.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /*height: 100%;*/
-}
+    height: 100%;
+}*/
 
 .background-size {
     height: 100%;
@@ -197,10 +197,6 @@ html, body {
     background-color: rgba(43,39,39,0.5);
   }
 
-  .blackboard {
-      background-image: ;
-      background-color: black;
-  }
 }
 
 /* Fade Animation: */
