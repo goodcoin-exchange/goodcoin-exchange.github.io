@@ -21,7 +21,11 @@ html, body {
     margin:0;
     height:100%;
     width: 100%;
-    background-color: #e7e7e7;
+    background-color: #5B5B5B;
+}
+
+.total-background {
+    background-color: #5B5B5B;
 }
 
 
@@ -191,7 +195,11 @@ html, body {
 @media screen and (max-width: 767px) {
   .sidenav {
     background-color: rgba(43,39,39,0.5);
-    width: 100%;
+  }
+
+  .blackboard {
+      background-image: ;
+      background-color: black;
   }
 }
 
