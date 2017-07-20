@@ -1,6 +1,9 @@
-/* Remove the navbar's default margin-bottom and rounded borders */
 p, li, h1, h2, h3, h4 {
   font-family: monospace;
+}
+
+h1, h2, h3, h4 {
+    font-weight: bold;
 }
 
 * {
@@ -15,8 +18,37 @@ html, body {
     background-color: #e7e7e7;
 }
 
+.white-fabric {
+    background-image: url("../resources/white-fabric.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.white-wood {
+    background-image: url("../resources/white-wood.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.dark-wood {
+    background-image: url("../resources/dark-wood.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 .active {
     font-weight: bold;
+}
+
+.bold-font {
+    font-weight: bold;
+    color: black;
 }
 
 .no-border {
