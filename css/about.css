@@ -1,25 +1,285 @@
-/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-.row.content {height: 1500px}
-
-/* Set gray background color and 100% height */
-.sidenav {
-  padding-top: 20px;
-  background-color: #e7e7e7;
-  height: 100%;
-}
-
-/* Set black background color, white text and some padding */
-footer {
-  background-color: #555;
+p, li, h1, h2, h3, h4, .sidenav {
+  font-family: palatino;
   color: white;
-  padding: 15px;
 }
 
-/* On small screens, set height to 'auto' for sidenav and grid */
+a {
+    font-family: monospace;
+}
+
+/*h1, h2, h3, h4 {
+    font-weight: bold;
+
+}*/
+
+* {
+    margin: 0;
+}
+
+html, body {
+    padding:0;
+    margin:0;
+    height:100%;
+    width: 100%;
+    background-color: #e7e7e7;
+}
+
+
+
+ footer {
+    position:relative;
+    bottom:0px;
+    width:100%;
+    /*height:60px;   /* Height of the footer */
+    height:5%;/* refer to top-tron height if changed */
+    /*background-color:#757575;*/
+    color: white;
+    text-align: center;
+
+}
+
+.big-letters {
+    font-size: 800%;
+    /*margin-left: 20%;*/
+    vertical-align: middle;
+    text-align: center;
+}
+
+.vertical-align {
+    vertical-align: middle;
+    /*height: 100%;*/
+    margin-top: 2%;
+}
+
+.blackboard {
+    background-image: url("../resources/dark-blackboard.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /*height: 100%;*/
+}
+
+.background-size {
+    height: 100%;
+}
+
+
+
+.footer-img {
+    margin-right: 10px;
+    margin-left: 10px;
+    display: inline-block;
+
+    height: 100%;
+    /*height: 70%;
+    width: 10%;*/
+}
+
+.footer-img-size {
+    height: 80%;
+    margin-top: 15%;
+
+}
+
+.light-opacity {
+    opacity: 0.5;
+}
+
+
+.light-opacity:hover {
+  opacity: 0.8;
+}
+
+
+
+.top-tron {
+    width: 100%;
+    padding-top: 50px;
+    height: 100%;
+}
+
+.light-gray{
+    background-color: #e7e7e7;
+}
+
+.dark-gray {
+    background-color: #bdbdbd;
+}
+
+.light-blue {
+    background-color: #B3E5FC;
+}
+
+.white {
+    background-color: white;
+}
+
+.active {
+    font-weight: bold;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  border: none;
+  width: 100%;
+}
+
+.nav-img:hover {
+    opacity: 0.5;
+}
+
+
+
+.icon-bar {
+    color: white;
+}
+
+.icon-bar:hover {
+    color: gray;
+}
+
+.sidenav {
+    height: 100%; /*refer to footer height*/
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    /*color: #818181;*/
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: gray;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding-top: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;
+
+  }
+  .sidenav a {font-size: 18px;}
+}
+
 @media screen and (max-width: 767px) {
   .sidenav {
-    height: auto;
-    padding: 15px;
+    background-color: rgba(43,39,39,0.5);
+    width: 100%;
   }
-  .row.content {height: auto;}
 }
+
+/* Fade Animation: */
+
+@-webkit-keyframes fade-in{
+from{
+    opacity:1;
+    /*top:0px;*/
+}
+to{
+    opacity:0;
+    /*top:-5px;*/
+}
+}
+.text-animated-one{
+/*display:inline;*/
+position:relative;
+top:0px;
+-webkit-animation:fade-in 4.5s infinite;
+
+}
+.text-animated-two{
+opacity:0;
+/*display:inline;*/
+position:relative;
+/*margin-left:-56px;*/
+-webkit-animation:fade-in 4.5s infinite;
+-webkit-animation-delay:1.5s;
+}
+
+.text-animated-three{
+opacity:0;
+/*display:inline;*/
+position:relative;
+/*margin-left:-56px;*/
+-webkit-animation:fade-in 4.5s infinite;
+-webkit-animation-delay:3s;
+}
+
+.aggettivi{
+display:inline;
+width:100px;
+height:100px;
+}
+
+/*Typing Animation:*/
+
+.typing{
+  font-family: "Courier";
+  font-size: 15px;
+  /*margin: 10px 0 0 10px;*/
+  white-space: nowrap;
+  overflow: hidden;
+  width: 14.5em;
+  animation: type 4s steps(60, end);
+
+  position: absolute;
+  bottom: 5px;
+
+  -webkit-animation-delay: 4s; /* Safari 4.0 - 8.0 */
+  animation-delay: 4s;
+
+  right: 5%;
+}
+
+.typing:nth-child(2){
+  animation: type2 8s steps(60, end);
+}
+
+.typing a{
+  /*text-decoration: none;*/
+}
+
+@keyframes type{
+  from { width: 0; }
+}
+
+@keyframes type2{
+  0%{width: 0;}
+  50%{width: 0;}
+  100%{ width: 100; }
+}
+
+@keyframes blink{
+  to{opacity: .0;}
+}
+
+/*::selection{
+  background: black;
+}*/
