@@ -12,20 +12,32 @@ a {
 
 }*/
 
+
 * {
     margin: 0;
 }
+
+
 
 html, body {
     padding:0;
     margin:0;
     height:100%;
     width: 100%;
-    background-color: #5B5B5B;
+    /*background-color: #5B5B5B;*/
+    background: rgb(125,126,125); /* Old browsers */
+}
+
+.wood-bg {
+    background-image: url("../resources/wood-bg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .total-background {
-    background-color: #5B5B5B;
+    background: #757675;
 }
 
 
@@ -182,7 +194,7 @@ html, body {
 
 #main {
     transition: margin-left .5s;
-    padding: 16px;
+    /*padding: 16px;*/
 }
 
 @media screen and (max-height: 450px) {
@@ -194,10 +206,9 @@ html, body {
 
 @media screen and (max-width: 767px) {
   .sidenav {
-    background-color: rgba(43,39,39,0.5);
+    background-image: url("../resources/wood-bg.jpg");
   }
 
-}
 
 /* Fade Animation: */
 
