@@ -26,7 +26,7 @@ html, body {
 
 
 .sidenav {
-    height: 95%; /*refer to footer height*/
+    height: 100%; /*refer to footer height*/
     width: 0;
     position: fixed;
     z-index: 1;
@@ -35,6 +35,8 @@ html, body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    /*border-right: 1px solid #bdbdbd;
+    border-top: 0px solid #bdbdbd;*/
     /*margin-top: 30px;*/
 
 }
@@ -42,7 +44,7 @@ html, body {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 17px;
     color: black;
     background-color: transparent;
     /*color: #818181;*/
@@ -279,7 +281,7 @@ html, body {
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
-  border: none;
+  border-bottom: 0px solid #bdbdbd;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -367,4 +369,70 @@ html, body {
   footer {
       position: fixed;
   }
+}
+
+
+/*Tic Tac Toe:*/
+.ticTacToeBoard {
+    height: 90%;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+}
+
+.gameButton {
+    height: 25%;
+    width: 13%;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 80px;
+}
+
+.gameButton:hover {
+    background-color: #bdbdbd;
+}
+
+.gb1 {
+    left: 27%;
+    top: 10%;
+}
+
+.gb2 {
+    left: 43.67%;
+    top: 10%;
+}
+.gb3 {
+    left: 60%;
+    top: 10%;
+}
+
+.gb4 {
+    left: 27%;
+    top: 40%;
+}
+
+.gb5 {
+    left: 43.67%;
+    top: 40%;
+}
+
+.gb6 {
+    left: 60%;
+    top: 40%;
+}
+
+.gb7 {
+    left: 27%;
+    top: 70%;
+}
+
+.gb8 {
+    left: 43.67%;
+    top: 70%;
+}
+
+.gb9 {
+    left: 60%;
+    top: 70%;
 }
