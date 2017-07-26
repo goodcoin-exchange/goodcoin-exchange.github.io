@@ -436,3 +436,28 @@ html, body {
     left: 60%;
     top: 70%;
 }
+
+.blurPage {
+    background-color: gray;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.userFirstBtn {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 5%;
+    height: 7%;
+}
+
+.meFirstBtn {
+    position: absolute;
+    top: 25%;
+    left: 16%;
+    width: 5%;
+    height: 7%;
+
+}
