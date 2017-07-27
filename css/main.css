@@ -445,19 +445,47 @@ html, body {
     z-index: 2;
 }
 
-.userFirstBtn {
+.sideBtn {
+    border-radius: 10px;
+    border-color: transparent;
     position: absolute;
-    top: 25%;
-    left: 10%;
-    width: 5%;
+
+    width: 10%;
     height: 7%;
+    background-color: #42A5F5;
+    font-family: monospace;
+    font-weight: bold;
+
+    -moz-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    transition: all .2s;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+
+}
+
+.sideBtn:hover {
+    -moz-box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);
+
+    margin-top: -3px;
+    transition: all .2s;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
 }
 
 .meFirstBtn {
-    position: absolute;
     top: 25%;
-    left: 16%;
-    width: 5%;
-    height: 7%;
+    left: 10%;
+}
 
+.playAgainBtn {
+    bottom: 15%;
+    right: 7%;
+    display: none;
 }
