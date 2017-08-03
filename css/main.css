@@ -15,8 +15,14 @@ html, body {
     margin:0;
     height:100%;
     width: 100%;
-    background-color: #e7e7e7;
+    /*background-color: #e7e7e7;*/
+    background-color: white;
 }
+
+.transparent {
+    background-color: transparent;
+}
+
 
 /* SideNav: */
 
@@ -99,8 +105,8 @@ html, body {
 
 /* end sidenav*/
 
-.white-fabric {
-    background-image: url("../resources/white-fabric.jpg");
+.blue-white-bg {
+    background-image: url("../resources/sky-blue-white-3.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
