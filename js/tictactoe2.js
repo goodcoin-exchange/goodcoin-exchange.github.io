@@ -162,32 +162,28 @@ function anticipateUserWin() {
 
 function anticipate2 (posList, playerMoves) {
     var answer = '0';
-    var counter = 0;
-    var sum = 0;
-    var tempArr = [];
+    var a = [], diff = [];
 
-    for (lis in posList) {
-        if (answer === '0') {
-            counter = 0;
-            sum = 0;
-            tempArr = [];
-            for (move in playerMoves) {
-                if (lis.includes(move)) {
-                    tempArr.push(move);
-                    if (tempArr.length > 1) {
-                        document.getElementById('message').innerHTML = "yes";
-                        for (i in lis) {
-                            for (j in tempArr) {
-                                if (j !== i) {
-                                    answer = i;
-                                    break;
-                                }
-                            }
-                        }
-                    }
+    for (var lis in posList) {
+        if (a.length !== 1) {
+            a = [];
+            for (var i = 0; i < playerMoves.length; i++) {
+                a[playerMoves[i]] = true;
+            }
+
+            for (var i = 0; i < lis.length; i++) {
+                if (a[lis[i]]) {
+                    delete a[lis[i]];
+                } else {
+                    a[lis[i]] = true;
                 }
             }
         }
+
+    }
+
+    if (a.length === 1) {
+        answer = a[0];
     }
 
     return answer;
