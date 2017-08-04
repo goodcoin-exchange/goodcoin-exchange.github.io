@@ -7,6 +7,7 @@ window.onload = function() {
 
   if (mq.matches) {
     // window width is at least 500px
+    document.getElementById("mySidenav").style.color = "white";
     setTransparent();
   }
   else {
@@ -27,15 +28,20 @@ function openNav() {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("mySidenav").style.backgroundColor = "transparent";
         document.getElementById("main").style.marginLeft= "0";
+        document.getElementById("topnav").style.backgroundImage = "none";
         //pushes main content
         menuOpen = false;
     }
     else {
         mq = window.matchMedia( "(max-width: 767px)" );
         if (mq.matches){
-            document.getElementById("mySidenav").style.backgroundColor = "#e7e7e7";
+            document.getElementById("mySidenav").style.backgroundColor = "#00CCFF";
+            document.getElementById("mySidenav").style.opacity = "0.9";
+            document.getElementById("mySidenav").style.textAlign = "center";
+
             document.getElementById("mySidenav").style.height = "100%";
-            document.getElementById("mySidenav").style.width = "65%";
+            document.getElementById("mySidenav").style.width = "100%";
+            document.getElementById("topnav").style.backgroundImage = "url('../resources/blue-edu.png')";
 
         }
         else {

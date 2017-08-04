@@ -80,7 +80,7 @@ html, body {
   .sidenav {padding-top: 15px;
 
   }
-  .sidenav a {font-size: 18px;}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -88,6 +88,7 @@ html, body {
       margin-top: 35px;
     background-color:  #e7e7e7;
   }
+  .sidenav a {font-size: 22px; }
 
   .blackboard {
       background-image: ;
@@ -106,13 +107,26 @@ html, body {
 /* end sidenav*/
 
 .blue-white-bg {
-    background-image: url("../resources/sky-blue-white-3.jpg");
+    background-image: url("../resources/sky-blue-white-2.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    /*background-repeat: no-repeat;
+    background-attachment: fixed;*/
 }
 
+.drops-design-bg {
+    background-image: url("../resources/drops-design-bg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .white-wood {padding-b
     background-image: url("../resources/white-wood.jpg");
     -webkit-background-size: cover;
