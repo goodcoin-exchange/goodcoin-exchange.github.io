@@ -15,8 +15,14 @@ html, body {
     margin:0;
     height:100%;
     width: 100%;
-    background-color: #e7e7e7;
+    /*background-color: #e7e7e7;*/
+    background-color: white;
 }
+
+.transparent {
+    background-color: transparent;
+}
+
 
 /* SideNav: */
 
@@ -26,7 +32,7 @@ html, body {
 
 
 .sidenav {
-    height: 95%; /*refer to footer height*/
+    height: 100%; /*refer to footer height*/
     width: 0;
     position: fixed;
     z-index: 1;
@@ -35,6 +41,8 @@ html, body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    /*border-right: 1px solid #bdbdbd;
+    border-top: 0px solid #bdbdbd;*/
     /*margin-top: 30px;*/
 
 }
@@ -42,7 +50,7 @@ html, body {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 17px;
     color: black;
     background-color: transparent;
     /*color: #818181;*/
@@ -72,7 +80,7 @@ html, body {
   .sidenav {padding-top: 15px;
 
   }
-  .sidenav a {font-size: 18px;}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -80,6 +88,7 @@ html, body {
       margin-top: 35px;
     background-color:  #e7e7e7;
   }
+  .sidenav a {font-size: 22px; }
 
   .blackboard {
       background-image: ;
@@ -97,14 +106,27 @@ html, body {
 
 /* end sidenav*/
 
-.white-fabric {
-    background-image: url("../resources/white-fabric.jpg");
+.blue-white-bg {
+    background-image: url("../resources/sky-blue-white-2.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    /*background-repeat: no-repeat;
+    background-attachment: fixed;*/
 }
 
+.drops-design-bg {
+    background-image: url("../resources/drops-design-bg.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .white-wood {padding-b
     background-image: url("../resources/white-wood.jpg");
     -webkit-background-size: cover;
@@ -279,7 +301,7 @@ html, body {
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
-  border: none;
+  border-bottom: 0px solid #bdbdbd;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
@@ -367,4 +389,123 @@ html, body {
   footer {
       position: fixed;
   }
+}
+
+
+/*Tic Tac Toe:*/
+.ticTacToeBoard {
+    height: 90%;
+    width: 50%;
+    position: absolute;
+    left: 25%;
+}
+
+.gameButton {
+    height: 25%;
+    width: 13%;
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    font-size: 80px;
+}
+
+.gameButton:hover {
+    background-color: #bdbdbd;
+}
+
+.gb1 {
+    left: 27%;
+    top: 10%;
+}
+
+.gb2 {
+    left: 43.67%;
+    top: 10%;
+}
+.gb3 {
+    left: 60%;
+    top: 10%;
+}
+
+.gb4 {
+    left: 27%;
+    top: 40%;
+}
+
+.gb5 {
+    left: 43.67%;
+    top: 40%;
+}
+
+.gb6 {
+    left: 60%;
+    top: 40%;
+}
+
+.gb7 {
+    left: 27%;
+    top: 70%;
+}
+
+.gb8 {
+    left: 43.67%;
+    top: 70%;
+}
+
+.gb9 {
+    left: 60%;
+    top: 70%;
+}
+
+.blurPage {
+    background-color: gray;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+
+.sideBtn {
+    border-radius: 10px;
+    border-color: transparent;
+    position: absolute;
+
+    width: 10%;
+    height: 7%;
+    background-color: #42A5F5;
+    font-family: monospace;
+    font-weight: bold;
+
+    -moz-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    transition: all .2s;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+
+}
+
+.sideBtn:hover {
+    -moz-box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);
+    box-shadow:0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 18px 60px 0 rgba(0, 0, 0, 0.19);
+
+    margin-top: -3px;
+    transition: all .2s;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+}
+
+.meFirstBtn {
+    top: 25%;
+    left: 10%;
+}
+
+.playAgainBtn {
+    bottom: 15%;
+    right: 7%;
+    display: none;
 }

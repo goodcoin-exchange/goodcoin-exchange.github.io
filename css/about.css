@@ -1,6 +1,6 @@
-p, li, h1, h2, h3, h4, .sidenav {
+p, li, h1, h2, h4, .sidenav {
   font-family: palatino;
-  color: white;
+  color: black;
 }
 
 a {
@@ -25,11 +25,11 @@ html, body {
     height:100%;
     width: 100%;
     /*background-color: #5B5B5B;*/
-    background: rgb(125,126,125); /* Old browsers */
+    background-color: white;/* Old browsers */
 }
 
-.wood-bg {
-    background-image: url("../resources/wood-bg.jpg");
+.background-img {
+    background-image: url("../resources/watercolor-bg.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -150,7 +150,7 @@ html, body {
 
 
 .icon-bar {
-    color: white;
+    color: black;
 }
 
 .icon-bar:hover {
@@ -172,8 +172,8 @@ html, body {
 .sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
-    color: white;
+    font-size: 17px;
+    color: black;
     /*color: #818181;*/
     display: block;
     transition: 0.3s;
@@ -206,9 +206,15 @@ html, body {
 
 @media screen and (max-width: 767px) {
   .sidenav {
-    background-image: url("../resources/wood-bg.jpg");
-  }
+    /*background-image: url("../resources/wood-bg.jpg");*/
 
+  }
+  .sidenav a {font-size: 22px; }
+/*
+  .background-img {
+      background-image: ;
+      background-color: white;
+  }*/
 
 /* Fade Animation: */
 
@@ -223,25 +229,36 @@ to{
 }
 }
 .text-animated-one{
+height: 40%;
+width: auto;
 /*display:inline;*/
-position:relative;
-top:0px;
+position:fixed;
+top:25%;
+left: 15%;
 -webkit-animation:fade-in 4.5s infinite;
 
 }
 .text-animated-two{
+    height: 40%;
+    width: auto;
 opacity:0;
 /*display:inline;*/
-position:relative;
+position:fixed;
+top: 25%;
+left:40%;
 /*margin-left:-56px;*/
 -webkit-animation:fade-in 4.5s infinite;
 -webkit-animation-delay:1.5s;
 }
 
 .text-animated-three{
+    height: 40%;
+    width: auto;
 opacity:0;
 /*display:inline;*/
-position:relative;
+position:fixed;
+top: 25%;
+right: 15%;
 /*margin-left:-56px;*/
 -webkit-animation:fade-in 4.5s infinite;
 -webkit-animation-delay:3s;
@@ -297,4 +314,104 @@ height:100px;
 
 /*::selection{
   background: black;
+}*/
+
+.quote {
+    position: fixed;
+    left: 10%;
+    bottom: 15%;
+    color: gray;
+    font-family: monospace;
+    font-size: 24px;
+}
+
+.quote:hover {
+    cursor: pointer;
+}
+
+.quote-2 {
+    position: fixed;
+    left: 50%;
+    bottom: 7%;
+    color: gray;
+    font-family: monospace;
+    font-size: 22px;
+}
+
+.plus-btn {
+    position: fixed;
+    height: 7%;
+    width: auto;
+    bottom: 5%;
+    right: 5%;
+
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+     transform: rotate(0deg);
+     transition: 0.5s;
+
+}
+
+.plus-rotate {
+    position: fixed;
+    height: 7%;
+    width: auto;
+    bottom: 5%;
+    right: 5%;
+
+
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+     transform: rotate(45deg);
+     transition: 0.5s;
+}
+
+.plus-btn:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.plus-rotate:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.show-home {
+    height: 30%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    bottom: 15%;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: transparent;
+}
+
+.show-home p {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+
+    display: block;
+    transition: 0.5s;
+}
+
+/*.sidenav a:hover, .offcanvas a:focus{
+    color: gray;
+}*/
+
+/*.show-home .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding-top: 50px;
+}*/
+
+/*#main {
+    transition: margin-left .5s;
+
 }*/
