@@ -157,6 +157,49 @@ html, body {
 
 /* end sidenav*/
 
+/* content */
+.img-content {
+  width: 50%;
+  height: auto;
+  position: relative;
+  left: 25%;
+}
+
+.txt-content {
+  font-size: 17px;
+  text-align: center;
+  font-family: arial;
+}
+
+.txt-container {
+  margin-top: 15px;
+}
+
+.post {
+  padding-bottom: 10%;
+}
+
+.plus-minus {
+    position: relative;
+    left: 70%;
+}
+
+.minus-sign {
+width: 4%;
+}
+
+.minus-sign:hover {
+    opacity: 0.5;
+}
+
+.plus-sign {
+width: 4%;
+}
+
+.plus-sign:hover {
+    opacity: 0.5;
+}
+
 .blue-white-bg {
     background-image: url("../resources/sky-blue-white-2.jpg");
     -webkit-background-size: cover;
