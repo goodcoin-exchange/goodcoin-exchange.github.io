@@ -7,12 +7,13 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" type="image/png" href="resources/developer-icon.png" />
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top light-gray">
+<!-- <nav class="navbar navbar-default navbar-fixed-top light-gray">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -21,77 +22,162 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-        <img src="resources/developer-icon.png" width="30" height="25">
+        <img src="../resources/developer-icon.png" width="30" height="25">
       </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="html/education.html">Education</a></li>
-        <li><a href="html/about.html">About</a></li>
-        <li><a href="html/portfolio.html">Portfolio</a></li>
+        <li><a href="../index.html">Home</a></li>
+        <li class="bold-font"><a href="html/education.html">Education</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-      <!--
-<ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-      </ul>-->
+
+<ul class="nav navbar-nav navbar-right margin-right">
+    <div class="nav-img light-opacity seperate-img">
+        <a href="">
+            <img src="resources/github.png" width="30" height="30">
+        </a>
+    </div>
+    <div class="nav-img light-opacity">
+    <a href="">
+      <img src="resources/linked-in.png" width="30" height="30">
+    </a>
+</div>
+      </ul>
 
     </div>
+  </div>
+</nav> -->
+
+
+<!-- Set background img here -->
+<div id="page-bg" class="">
+
+<nav id="topnav" class="navbar navbar-default navbar-fixed-top transparent">
+  <div class="container-fluid">
+    <div class="navbar-header">
+
+      <!-- Menu button -->
+      <div class="navbar-brand">
+        <span class="icon-bar" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    </div>
+    <!-- Account Nav Btn -->
+    <ul class="nav navbar-nav navbar-right margin-right">
+        <div class="nav-img light-opacity">
+          <span onclick="openAccount()" style="font-size:30px;cursor:pointer">
+              <img src="resources/my-account.png" width="30" height="30">
+          </span>
+        </div>
+    </ul>
+
   </div>
 </nav>
 
-<div class="top-tron light-gray">
-  <div class="container text-center">
-    <h1>Welcome to World Machine</h1>
-    <p></p>
+<div id="sidenav-container">
+  <div class="top-tron">
+    <div id="mySidenav" class="sidenav">
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+      <a href="index.html">Home</a>
+      <a href="html/education.html">My Page</a>
+      <a href="html/portfolio.html">Friends</a>
+      <a href="html/about.html">About</a>
+
+      <div class="container">
+        <div class="nav-img">
+            <a href="https://github.com/worldMachine">
+                <img src="resources/github.png" width="30" height="30">
+            </a>
+        </div>
+        <!--<div class="nav-img">
+            <a href="">
+                <img src="resources/linked-in.png" width="30" height="30">
+            </a>
+        </div> -->
+      </div>
 
 
-<div class="container-fluid bg-3 text-center">
-  <h3>Some panels:</h3><br>
+    </div>
+  </div>
+</div>
+
+<div id="accountnav-container">
+  <div class="top-tron">
+    <div id="myaccountnav" class="accountnav">
+      <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+      <img src="resources/my-account.png" class="profile-pic">
+      <a href="index.html">My Account</a>
+      <a href="html/education.html">My Page</a>
+      <a href="html/portfolio.html">Friends</a>
+      <a href="html/about.html">About</a>
+    </div>
+  </div>
+</div>
+
+<div id="main" class="">
+  <div id="main-inner">
+<div class="">
+    <div class="container text-center page-title">
+        <h1 class="padding-bottom"> Education</h1>
+    </div>
+
+<div class="container-fluid ">
   <div class="row">
-    <div class="col-sm-3 ">
-      <p>text</p>
-      <p>text</p>
-        <a href="https://slconnected.com">
-            <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive tile dark-gray" alt="Image">
-        </a>
+    <div class="col-sm-6">
+        <img class="center-block left-img" src="resources/comp-grad.png">
     </div>
-    <div class="col-sm-3 ">
-      <p>Some text..</p>
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive tile" alt="Image">
-    </div>
-    <div class="col-sm-3">
-      <p>Some text..</p>
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive tile" alt="Image">
-    </div>
-    <div class="col-sm-3 padding-for-footer">
-      <p>Some text..</p>
-      <p>Some text..</p>
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive tile" alt="Image">
+    <div class="col-sm-6">
+        <h2 class="text-center padding-top">St. John's University</h2>
+        <h3 class="text-center padding-bottom">New York, New York</h2>
+        <h2 class="text-center">B.S. Computer Science</h1>
+        <h3 class="text-center">Philosophy</h2>
+        <h4 class="text-center">Class of 2018</h4>
     </div>
   </div>
 </div>
-  </div>
 </div>
 
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col-sm-6">
+        <h2 class="text-center">Relevant Courses:</h2>
+        <p class="text-center">Computer Programming Fundamentals I</p>
+        <p class="text-center">Computer Programming Fundamentals II</p>
+        <p class="text-center">Fundamentals of Cyber Security</p>
+        <p class="text-center">Introduction to Data Structures</p>
+        <p class="text-center">Software Design Methods</p>
+        <p class="text-center">Data Security and Cryptography</p>
+        <p class="text-center">Advanced Data Structures</p>
+        <p class="text-center">Database Management Systems</p>
+        <p class="text-center">Systems Analysis</p>
+        <p class="text-center">Theory of Programming Language</p>
+        <p class="text-center">Operating Systems</p>
+        <p class="text-center">Software Engineering</p>
+    </div>
+    <div class="col-sm-6">
+        <img class="center-block right-img" src="resources/st-johns.png">
+    </div>
 
-<footer class="container-fluid text-center">
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<!-- <footer class="container-fluid text-center">
     <div class="footer-img light-opacity">
         <a href="">
-            <img src="resources/github.png" class="footer-img-size">
+            <img src="../resources/github.png" class="footer-img-size">
         </a>
     </div>
     <div class="footer-img light-opacity">
     <a href="">
-      <img src="resources/linked-in.png" class="footer-img-size">
+      <img src="../resources/linked-in.png" class="footer-img-size">
     </a>
 </div>
-</footer>
-
-
+</footer> -->
 
 </body>
 </html>
