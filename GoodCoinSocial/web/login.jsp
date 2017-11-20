@@ -11,8 +11,7 @@
     <title>Login</title>
 </head>
 <body>
-<form name="form" action="<%=request.getContextPath()%>
-/LoginServlet" method="post">
+<form action="/LoginServlet" method="post">
 
     <table align="center">
 
@@ -28,7 +27,7 @@
             <td><span style="color:red"><%=(request.getAttribute("errMessage") == null) ? "" : request.getAttribute("errMessage")%></span></td>
         </tr>
         <tr>
-            <td></td>
+
             <td><input type="submit" value="Login"></input><input type="reset" value="Reset"></input></td>
         </tr>
     </table>

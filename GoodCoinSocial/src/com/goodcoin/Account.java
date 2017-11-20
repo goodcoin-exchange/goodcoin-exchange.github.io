@@ -13,7 +13,8 @@ public class Account {
 
     public boolean isValidAccount(String sEmail, String sPassword)
     {
-        if (checkEmail(sEmail)&&checkPassword(sPassword))
+
+       if (checkEmail(sEmail)&&checkPassword(sPassword))
         return true;
         return false;
     }

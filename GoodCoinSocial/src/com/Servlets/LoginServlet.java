@@ -11,7 +11,7 @@ import java.io.IOException;
 import com.Beans.LoginBean;
 import com.goodcoin.Login;
 
-@WebServlet(name = "LoginServlet")
+@WebServlet(name = "login")
 public class LoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -26,6 +26,10 @@ public class LoginServlet extends HttpServlet {
         Login login = new Login();
 
         try {
+            System.out.println("Got this far");
+            request.getRequestDispatcher("/login.jsp").forward(request,response);
+
+
             String userAuth = login.authenticateCredentials(loginBean);
 
             if(userAuth.equals("USER_ROLE"))
@@ -40,17 +44,12 @@ public class LoginServlet extends HttpServlet {
             {
                 System.out.println("Error: " + userAuth);
                 request.setAttribute("errMessage", userAuth);
-                request.getRequestDispatcher("/login.jsp");
+                request.getRequestDispatcher("/login.jsp").forward(request,response);
             }
 
-        } catch (IOException e1) {
-            e1.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        catch(Exception e2)
-        {
-            e2.printStackTrace();
-        }
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
