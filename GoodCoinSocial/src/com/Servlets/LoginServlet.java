@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.sql.SQLException;
 
 import com.Beans.LoginBean;
 import com.goodcoin.Login;
@@ -48,6 +49,8 @@ public class LoginServlet extends HttpServlet {
             }
 
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (SQLException e){
             e.printStackTrace();
         }
     }

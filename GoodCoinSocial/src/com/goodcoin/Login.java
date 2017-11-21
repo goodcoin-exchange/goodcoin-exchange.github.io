@@ -10,16 +10,15 @@ import com.util.JDBCConnection;
 
 
 public class Login {
-    public String authenticateCredentials(LoginBean loginBean)
+
+    private Connection conn = null;
+    private PreparedStatement preparedStatement = null;
+    private ResultSet resultSet = null;
+
+    public String authenticateCredentials(LoginBean loginBean) throws SQLException
     {
         String email = loginBean.getEmail();
         String password = loginBean.getsPassword();
-
-
-
-        Connection conn = null;
-        PreparedStatement preparedStatement = null;
-        ResultSet resultSet = null;
 
         String DEmail = "";
         String DPass = "";
@@ -46,10 +45,62 @@ public class Login {
         }
         catch (SQLException e) {
             e.printStackTrace();
-
-    }
+        }  finally {
+            conn.close();
+            resultSet.close();
+        }
 
         return "Invalid Credentials, try again";
 
+    }
+
+    public boolean checkIfAccountExists(String sEmail) throws SQLException
+    {
+
+
+        try {
+            conn = JDBCConnection.getConnection();
+            preparedStatement = conn.prepareStatement("select * from users where email = 'sEmail'");
+            resultSet = preparedStatement.executeQuery();
+
+            if(resultSet.next())
+            {
+                return true;
+            }
+
+        }
+         catch (SQLException e)
+        {
+            e.printStackTrace();
+        } finally {
+            conn.close();
+            resultSet.close();
+        }
+
+        return false;
+    }
+
+    public boolean createAccount(String username, String email, String password, String IP) throws SQLException
+    {
+
+        try {
+            conn = JDBCConnection.getConnection();
+            preparedStatement = conn.prepareStatement("Insert into Users (username,email,password,last_IP)");
+            resultSet = preparedStatement.executeQuery();
+
+            if(resultSet.next())
+            {
+                return true;
+            }
+
+        }
+        catch (SQLException e)
+        {
+            e.printStackTrace();
+        } finally {
+            conn.close();
+            resultSet.close();
+        }
+        return false;
     }
 }

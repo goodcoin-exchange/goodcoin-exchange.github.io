@@ -6,6 +6,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
+
+import com.goodcoin.Login;
+import com.util.BCrypt;
 
 @WebServlet(name = "Welcome")
 public class WelcomeServlet extends HttpServlet {
